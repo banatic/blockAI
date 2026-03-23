@@ -1,0 +1,22 @@
+# BlockAI 차단 키워드 설정 파일
+# 이 파일은 GitHub 저장소(https://github.com/banatic/blockAI)의 루트에 위치해야 하며,
+# 프로그램은 https://raw.githubusercontent.com/banatic/blockAI/main/keyword.toml 경로에서 이 내용을 읽어옵니다.
+
+keywords = [
+    "chatgpt",
+    "openai",
+    "claude",
+    "anthropic",
+    "gemini",
+    "google bard",
+    "microsoft copilot",
+    "perplexity",
+    "character.ai",
+    "poe.com",
+    "you.com",
+    "deepseek",
+    "huggingface",
+    "mistral ai",
+    "grok",
+    "x.ai"
+]

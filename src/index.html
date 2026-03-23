@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>BlockAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="app-container">
+      <main class="glass-card">
+        <header class="card-header">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span class="status-text">실시간 감시 중</span>
+          </div>
+          <h1 class="app-title">블록<span>AI</span></h1>
+        </header>
+
+        <div class="scan-progress">
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+
+        <section class="stats-grid">
+          <div class="stat-item">
+            <label>스캔 횟수</label>
+            <div class="value mono" id="scans">0</div>
+          </div>
+          <div class="stat-item">
+            <label>감지 키워드</label>
+            <div class="value" id="keyword">—</div>
+          </div>
+          <div class="stat-item wide">
+            <label>활성 창 제목</label>
+            <div class="value truncate" id="windowTitle">—</div>
+          </div>
+          <div class="stat-group">
+            <div class="stat-mini">
+              <label>직전 종료</label>
+              <div class="value mono" id="lastKill">0</div>
+            </div>
+            <div class="stat-mini">
+              <label>누적 종료</label>
+              <div class="value mono" id="totalKill">0</div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="card-footer">
+          <p>자동 회피 기동 활성화됨 (v0.1.0)</p>
+        </footer>
+
+        <div class="error-toast" id="warn" hidden></div>
+      </main>
+    </div>
+  </body>
+</html>
