@@ -52,5 +52,5 @@ window.addEventListener("DOMContentLoaded", () => {
   
   // Real-time updates
   setInterval(tickSnapshot, 1000);
-  setInterval(tickFlee, 90);
+  setInterval(tickFlee, 50);
 });

@@ -19,10 +19,14 @@ serde_json = "1"
 reqwest = { version = "0.12", features = ["blocking", "json"] }
 toml = "0.8"
 once_cell = "1.19"
+window-vibrancy = "0.7"
 
 [target.'cfg(windows)'.dependencies]
 windows = { version = "0.58", features = [
     "Win32_Foundation",
     "Win32_UI_WindowsAndMessaging",
+    "Win32_System_LibraryLoader",
+    "Win32_Graphics_Gdi",
+    "Win32_Graphics_Dwm",
 ] }
 sysinfo = { version = "0.32", default-features = false, features = ["system"] }

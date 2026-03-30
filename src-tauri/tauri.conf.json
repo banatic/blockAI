@@ -12,15 +12,15 @@
       {
         "label": "main",
         "title": "BlockAI",
-        "width": 308,
-        "height": 248,
+        "width": 340,
+        "height": 360,
         "resizable": false,
         "maximizable": false,
         "decorations": false,
         "transparent": true,
         "shadow": false,
         "alwaysOnTop": true,
-        "skipTaskbar": false,
+        "skipTaskbar": true,
         "visible": true
       }
     ],

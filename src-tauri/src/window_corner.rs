@@ -11,8 +11,8 @@ static LAST_FLEE: Mutex<Option<Instant>> = Mutex::new(None);
 
 const EDGE_MARGIN: i32 = 14;
 /// 창 바깥으로 이 픽셀만큼 확장한 띠 안에 커서가 들어오면 ‘접근 중’으로 간주합니다.
-const APPROACH_PAD: i32 = 76;
-const FLEE_COOLDOWN: Duration = Duration::from_millis(420);
+const APPROACH_PAD: i32 = 60;
+const FLEE_COOLDOWN: Duration = Duration::from_millis(250);
 
 #[cfg(windows)]
 fn cursor_physical() -> Option<PhysicalPosition<i32>> {
@@ -80,9 +80,8 @@ pub fn tick_window_flee(app: &AppHandle) -> Option<u8> {
     let zb = ib + APPROACH_PAD;
 
     let in_approach = cx >= zl && cx <= zr && cy >= zt && cy <= zb;
-    let in_window = cx >= il && cx <= ir && cy >= it && cy <= ib;
 
-    if !in_approach || in_window {
+    if !in_approach {
         return None;
     }
 

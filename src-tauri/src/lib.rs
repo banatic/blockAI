@@ -5,11 +5,21 @@ mod monitor;
 mod window_corner;
 #[cfg(windows)]
 mod win_titles;
+#[cfg(windows)]
+mod window_blur;
 
 use monitor::spawn_monitor;
 use serde::Serialize;
 use std::sync::{Arc, Mutex};
 use tauri::Manager;
+
+#[cfg(target_os = "windows")]
+use window_vibrancy::apply_acrylic;
+
+#[cfg(target_os = "windows")]
+use windows::Win32::Graphics::Dwm::{DwmSetWindowAttribute, DWMWA_WINDOW_CORNER_PREFERENCE, DWMWCP_ROUND};
+#[cfg(target_os = "windows")]
+use windows::Win32::Foundation::HWND;
 
 #[derive(Default, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -51,6 +61,23 @@ pub fn run() {
         .setup(|app| {
             if let Some(w) = app.get_webview_window("main") {
                 let _ = window_corner::place_window_at_corner(&w, 0);
+                #[cfg(target_os = "windows")]
+                {
+                    let _ = apply_acrylic(&w, None);
+                    
+                    // Windows 11 시스템 라운딩 강제 적용
+                    if let Ok(hwnd) = w.hwnd() {
+                        unsafe {
+                            let preference = DWMWCP_ROUND;
+                            let _ = DwmSetWindowAttribute(
+                                HWND(hwnd.0 as _),
+                                DWMWA_WINDOW_CORNER_PREFERENCE,
+                                &preference as *const _ as *const _,
+                                std::mem::size_of::<i32>() as u32,
+                            );
+                        }
+                    }
+                }
             }
             spawn_monitor(snap_for_thread);
             Ok(())

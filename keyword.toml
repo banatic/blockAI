@@ -3,20 +3,37 @@
 # 프로그램은 https://raw.githubusercontent.com/banatic/blockAI/main/keyword.toml 경로에서 이 내용을 읽어옵니다.
 
 keywords = [
-    "chatgpt",
-    "openai",
-    "claude",
-    "anthropic",
-    "gemini",
-    "google bard",
-    "microsoft copilot",
-    "perplexity",
-    "character.ai",
-    "poe.com",
+    # --- 글로벌 ---
+    "chatgpt", "openai", "o1-preview", "o1-mini",
+    "claude", "anthropic", "sonnet", "haiku", "opus",
+    "gemini", "google bard", "notebooklm",
+    "microsoft copilot", "bing chat",
+    "perplexity", "arc search",
+    "grok", "x.ai",
+
+    # --- 국내 ---
+    "wrtn", "뤼튼",            
+    "clova x", "클로바 x",    
+    "cue:", "naver cue",    
+    "kakaobrain", "karlo",    
+
+    # --- Aggregators ---
+    "poe.com", "poe",        
+    "character.ai",         
     "you.com",
-    "deepseek",
-    "huggingface",
-    "mistral ai",
-    "grok",
-    "x.ai"
+    "huggingface", "hugging chat",
+    "lmsys", "chatbot arena", 
+    "chathub",
+    "vercel ai", "v0.dev",   
+
+    # --- 중국 ---
+    "deepseek",                
+    "mistral", "mistral ai",
+    "qwen", "alibaba cloud",
+    "kling ai", "luma dream", 
+
+    # --- 코딩 ---
+    "cursor", "cursor.com",   
+    "blackbox ai",
+    "bolt.new", "stackblitz"
 ]
