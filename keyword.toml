@@ -2,43 +2,150 @@
 # 이 파일은 GitHub 저장소(https://github.com/banatic/blockAI)의 루트에 위치해야 하며,
 # 프로그램은 https://raw.githubusercontent.com/banatic/blockAI/main/keyword.toml 경로에서 이 내용을 읽어옵니다.
 
+# BlockAI 차단 키워드 설정 파일
+# 최종 업데이트: 2026-04
+# https://raw.githubusercontent.com/banatic/blockAI/main/keyword.toml
+
+# ════════════════════════════════════════
+#  🌐 글로벌 주요 AI 챗봇
+# ════════════════════════════════════════
 keywords = [
-    # --- 글로벌 ---
-    "chatgpt", "openai", "o1-preview", "o1-mini",
-    "claude", "anthropic", "sonnet", "haiku", "opus",
-    "gemini", "google bard", "notebooklm",
-    "microsoft copilot", "bing chat",
-    "perplexity", "arc search",
-    "grok", "x.ai",
+    "chatgpt", "chat.openai.com",
+    "openai", "gpt-4o", "gpt-5", "o1-preview", "o1-mini", "o3", "o4",
+    "claude", "anthropic", "claude.ai", "sonnet", "haiku", "opus",
+    "gemini", "google bard", "bard",
+    "notebooklm", "notebook lm",
+    "microsoft copilot", "copilot.microsoft.com", "bing chat",
+    "meta ai", "meta.ai", "llama", "llama4",
+    "grok", "x.ai", "grokipedia",
+    "perplexity", "perplexity.ai",
+    "arc search",
+    "pi.ai", "inflection ai",
+    "phind",
 
-    # --- 국내 ---
-    "wrtn", "뤼튼",            
-    "clova x", "클로바 x",    
-    "cue:", "naver cue",    
-    "kakaobrain", "karlo",    
+    # ════════════════════════════════════════
+    #  🇰🇷 국내 AI
+    # ════════════════════════════════════════
+    "wrtn", "뤼튼", "wrtn.ai",
+    "clova x", "클로바 x", "clovax",
+    "hyperclova", "하이퍼클로바", "hyperclova x",
+    "askup", "아숙업",
+    "cue:", "naver cue", "네이버 큐",
+    "kakaobrain", "karlo",
+    "a.x", "kakao ai",
 
-    # --- Aggregators ---
-    "poe.com", "poe",        
-    "character.ai",         
-    "you.com",
-    "huggingface", "hugging chat",
-    "lmsys", "chatbot arena", 
-    "chathub",
-    "vercel ai", "v0.dev",   
+    # ════════════════════════════════════════
+    #  🔀 멀티모델 Aggregator / Wrapper
+    # ════════════════════════════════════════
+    "poe", "poe.com",
+    "chathub", "chathub.gg",
+    "openrouter", "openrouter.ai",
+    "typingmind", "typingmind.com",
+    "magai",
+    "shiori", "shiori.ai",
+    "venice", "venice.ai",
+    "merlin",
+    "taskade",
+    "huggingface", "hugging face", "huggingchat", "hugging chat",
+    "lmsys", "chatbot arena",
+    "vercel ai", "v0.dev", "v0 by vercel",
+    "duck.ai", "duckduckgo ai",
+    "you.com", "youchat",
+    "together ai", "together.ai",
+    "nat.dev",
 
-    # --- 중국 ---
-    "deepseek",                
+    # ════════════════════════════════════════
+    #  🔓 로그인 없는 무료 래퍼
+    # ════════════════════════════════════════
+    "deepai", "deepai.org",
+    "talkai", "talkai.info",
+    "aifreeforever",
+    "nummi", "nummi.ai",
+    "easemate",
+
+    # ════════════════════════════════════════
+    #  🎭 롤플레이 / 캐릭터 AI
+    # ════════════════════════════════════════
+    "character.ai", "character ai", "c.ai",
+    "janitor ai", "janitorai",
+    "replika",
+    "crushon", "crushon.ai",
+    "polybuzz", "polybuzz.ai",
+    "perchance",
+    "spicy chat", "spicychat",
+
+    # ════════════════════════════════════════
+    #  🖼️ 이미지 생성 AI
+    # ════════════════════════════════════════
+    "midjourney",
+    "stable diffusion",
+    "dall-e", "dalle",
+    "ideogram",
+    "adobe firefly",
+    "runway ml", "runwayml", "runway",
+    "leonardo ai", "leonardo.ai",
+    "flux",
+    "kling ai",
+    "luma dream", "luma ai",
+    "karlo",
+
+    # ════════════════════════════════════════
+    #  💻 코딩 AI
+    # ════════════════════════════════════════
+    "cursor", "cursor.com",
+    "github copilot",
+    "windsurf",
+    "codeium",
+    "replit",
+    "lovable", "lovable.dev",
+    "tabnine",
+    "amazon q",
+    "aider",
+    "devin",
+    "claude code",
+    "blackbox ai", "blackboxai",
+    "bolt.new", "bolt",
+    "stackblitz",
+
+    # ════════════════════════════════════════
+    #  ✍️ 글쓰기 / 카피라이팅 AI
+    # ════════════════════════════════════════
+    "jasper", "jasper ai",
+    "copy.ai", "copyai",
+    "writesonic", "chatsonic",
+    "rytr",
+    "notion ai",
+    "sudowrite",
+    "quillbot",
+
+    # ════════════════════════════════════════
+    #  🔍 AI 검색 / 리서치
+    # ════════════════════════════════════════
+    "perplexity",
+    "kagi",
+    "elicit",
+
+    # ════════════════════════════════════════
+    #  🌏 중국 AI
+    # ════════════════════════════════════════
+    "deepseek",
+    "qwen", "alibaba cloud ai",
     "mistral", "mistral ai",
-    "qwen", "alibaba cloud",
-    "kling ai", "luma dream", 
+    "kimi", "moonshot ai",
+    "baidu ernie", "ernie bot",
 
-    # --- 코딩 ---
-    "cursor", "cursor.com",   
-    "blackbox ai",
-    "bolt.new", "stackblitz"
+    # ════════════════════════════════════════
+    #  🎵 음악 / 영상 생성 AI
+    # ════════════════════════════════════════
+    "suno", "suno ai",
+    "udio",
+    "pika", "pika labs",
+    "heygen",
+    "invideo ai",
 
-    # --- 그외 ---
-    # "youtube", "game", "gunshot", ".io", "피쿠",
-    #"instagram"
-
+    # ════════════════════════════════════════
+    #  🚫 주석 처리된 예비 키워드
+    # ════════════════════════════════════════
+    # "youtube", "game", "gunshot", ".io",
+    # "instagram", "피쿠",
 ]
