@@ -82,6 +82,11 @@ pub fn run() {
             spawn_monitor(snap_for_thread);
             Ok(())
         })
+        .on_window_event(|_window, event| {
+            if let tauri::WindowEvent::CloseRequested { api, .. } = event {
+                api.prevent_close();
+            }
+        })
         .invoke_handler(tauri::generate_handler![get_monitor_snapshot, tick_window_flee])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

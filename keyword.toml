@@ -35,9 +35,10 @@ keywords = [
     # --- 코딩 ---
     "cursor", "cursor.com",   
     "blackbox ai",
-    "bolt.new", "stackblitz",
+    "bolt.new", "stackblitz"
 
     # --- 그외 ---
-    "youtube", "game", "gunshot", ".io", "피쿠",
-    "instagram"
+    # "youtube", "game", "gunshot", ".io", "피쿠",
+    #"instagram"
+
 ]

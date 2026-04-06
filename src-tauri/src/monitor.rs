@@ -4,7 +4,7 @@ use std::time::Duration;
 use serde::Deserialize;
 
 const SCAN_INTERVAL_SECS: u64 = 2;
-const FETCH_INTERVAL_SECS: u64 = 600; // Update keywords every 10 minutes
+const FETCH_INTERVAL_SECS: u64 = 60; // Update keywords every 1 minute
 const REMOTE_TOML_URL: &str = "https://raw.githubusercontent.com/banatic/blockAI/main/keyword.toml";
 
 #[derive(Deserialize)]
