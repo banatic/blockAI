@@ -22,6 +22,7 @@ keywords = [
     "arc search",
     "pi.ai", "inflection ai",
     "phind",
+    "Genspark", "Use AI",
 
     # ════════════════════════════════════════
     #  🇰🇷 국내 AI
@@ -146,6 +147,6 @@ keywords = [
     # ════════════════════════════════════════
     #  🚫 주석 처리된 예비 키워드
     # ════════════════════════════════════════
-    "youtube", "game", "gunshot", ".io",
-    "instagram", "피쿠",
+    #"youtube", "game", "gunshot", ".io",
+    #"instagram", "피쿠",
 ]
