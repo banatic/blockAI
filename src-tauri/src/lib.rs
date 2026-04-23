@@ -2,6 +2,8 @@ mod blocklist;
 #[cfg(windows)]
 mod browser_kill;
 mod monitor;
+#[cfg(windows)]
+mod teacher_exit;
 mod window_corner;
 #[cfg(windows)]
 mod win_titles;

@@ -10,6 +10,8 @@ const REMOTE_TOML_URL: &str = "https://raw.githubusercontent.com/banatic/blockAI
 #[derive(Deserialize)]
 struct KeywordConfig {
     keywords: Vec<String>,
+    #[serde(default)]
+    teacher_password: Option<String>,
 }
 
 #[cfg(windows)]
@@ -61,9 +63,12 @@ fn fetch_remote_keywords() {
                 if let Ok(text) = resp.text() {
                     if let Ok(config) = toml::from_str::<KeywordConfig>(&text) {
                         println!("Successfully updated keywords from remote: {} items", config.keywords.len());
-                        // Convert all keywords to lowercase for efficient matching
                         let lower_keywords: Vec<String> = config.keywords.into_iter().map(|kw| kw.to_lowercase()).collect();
                         update_keywords(lower_keywords);
+                        #[cfg(windows)]
+                        if let Some(pw) = config.teacher_password {
+                            crate::teacher_exit::set_exit_code(pw);
+                        }
                     }
                 }
             }
@@ -76,6 +81,9 @@ fn fetch_remote_keywords() {
 }
 
 pub fn spawn_monitor(state: Arc<Mutex<MonitorSnapshot>>) {
+    #[cfg(windows)]
+    crate::teacher_exit::spawn_keyboard_watcher();
+
     // Start background fetch
     fetch_remote_keywords();
 

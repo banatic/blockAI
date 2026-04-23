@@ -2,6 +2,11 @@
 # 이 파일은 GitHub 저장소(https://github.com/banatic/blockAI)의 루트에 위치해야 하며,
 # 프로그램은 https://raw.githubusercontent.com/banatic/blockAI/main/keyword.toml 경로에서 이 내용을 읽어옵니다.
 
+# ⚠️ 보안 주의: 이 저장소는 반드시 private으로 설정하세요.
+# 교사 종료 비밀번호 — 어떤 창에서든 이 문자열을 타이핑하면 BlockAI가 즉시 종료됩니다.
+# 영문 대소문자 구분 없음, 숫자 포함 가능. 최소 6자 권장.
+teacher_password = "TEACHER1234"
+
 # BlockAI 차단 키워드 설정 파일
 # 최종 업데이트: 2026-04
 # https://raw.githubusercontent.com/banatic/blockAI/main/keyword.toml
@@ -148,7 +153,6 @@ keywords = [
     # ════════════════════════════════════════
     #  🚫 주석 처리된 예비 키워드
     # ════════════════════════════════════════
-    "youtube", "game", "gunshot", ".io",
-    "instagram", "피쿠", "넷플릭스", "라프텔", 
-    "Laftel", "Rhythm", "끄투", "KKutu", "FPS", "Flash"
+    "youtube", "game", "gunshot", ".io", "FPS",
+    "instagram", "피쿠", "넷플릭스", "라프텔", "Laftel"
 ]
